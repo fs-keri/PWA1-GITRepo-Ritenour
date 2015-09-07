@@ -52,7 +52,8 @@
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|');    //creates a variable and splits the string into pieces
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);  //creates a variable, convert it to lowercase and start at index 0 and return the entire string
+			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);  //creates a variable, convert it to lowercase and start at index 0 and
+			// return the entire string, change to dbItem
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
@@ -62,7 +63,7 @@
 				
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem);   //creates a variable that is equal to the index of the item
+				var compare = dbitem.indexOf(qitem);   //creates a variable that is equal to the index of the item, change to dbItem
 				if(compare !== -1){       //creates an if statement that checks to if the compare variable does not equal less than 1
 					results.push(db[i]); //stores the results at the end of the array
 				};   //close
