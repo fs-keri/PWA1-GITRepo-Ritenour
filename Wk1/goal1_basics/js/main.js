@@ -1,7 +1,7 @@
 /*
-     Name:
+     Name:  Keri Ritenour
      Date:
-     Class & Section:  PWA1-####
+     Class & Section:  PWA1-01
      Comments: "Goal 1: Review of WPF"
  */
 
@@ -14,7 +14,7 @@
 
      BREAKING A VARIABLE DOWN TO INDIVIDUAL PIECES
          - an example
-            var lastName = "bond"
+            var lastName = "bond"  ---------declaring and defining on one line
 
          - variable declaration begins with the var keyword
          - variable assignment uses the assignment operator  ( = )
@@ -24,11 +24,11 @@
          (string, number, boolean, etc).
 
 	DATA TYPES:
-		string
-		number
-		boolean
-		array				[0, 1, 2]
-		function			function(){}
+		string              "any character can go here"
+		number              1, 25, 0, 3.22, 6.02e23
+		boolean             true or false
+		array				[0, 1, 2]   [1, true, "3"]
+		function			function(){statements;}
 		undefined
 		null
 
