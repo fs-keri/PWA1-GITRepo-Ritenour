@@ -51,6 +51,13 @@
 // variables
 console.log('------ variables ----------');
 
+    //If variable is declared outside a function, it can be used anywhere  (GLOBAL)
+    //If variable is declared inside a function, it can only be used within that function (LOCAL)
+    //This is known as variable scope. There are 2 kinds: global and local
+
+    //If you forget ot declare a variable before using it, the variable will always be global
+    //even if the first time you use it is in a function
+
     //example 1: variables defined properly
     //var name="james";
     //var course="PWA1";
@@ -75,16 +82,27 @@ console.log('------ variables ----------');
 console.log('------ strings ----------');
 
     //basic string
-
+    var name = "James Bond";
+    console.log(name);
 
     //string w/ escape characters " \ "
-
+    var testString = "He's in PWA1";
+    console.log("Example 1: ", testString);
 
     //string w/ escape characters and mixed single/double quotes
+    var testString = "I need some \"quotes\" to be here.";
+    console.log("Example 2: ", testString);
 
+    var testString = 'He\'s in PWA1';
+    console.log("Example 3: ", testString);
+
+    var testString = 'He\'s in ' + '"PWA1"';
+    console.log("Example 4: ", testString);
 
     //this example shows that all the "phase" vars above were overwritten
-
+    var num = 3;
+    var testString = 'He\'s in PWA1 ' + num;
+    console.log("Example 5: ", testString);
 
 
 // numbers (definition, concatenation +, math, numbers & strings)
