@@ -562,7 +562,17 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
+*/
 
+    var myctr = 1;
+
+    var myCounter = function(){
+        myctr++;
+        console.log("counter = ", myctr);
+    };
+
+    myCounter();
+    myCounter();
 
 
 
@@ -601,8 +611,14 @@ console.log('------Functions ----------');
     - items inside our function we call on these variables.. such as:
  */
 
+    var value1 = 1;
+    var value2 = 2;
 
+    var myFn = function(var1, var2){
+        console.log("function number: " , var1 + var2);
+    };
 
+    myFn(value1, value2);
 
 /*******************************************
  STUDENT ACTIVITY 6:
@@ -612,10 +628,19 @@ console.log('------Functions ----------');
      2.  pass a parameter called 'newct' into the function
      3   add the myctr to the parameter being passed into the function
      4.  first time: pass a 5 into the function as an argument
-     5.  second time: pass a 2 into the funciton as an argument
+     5.  second time: pass a 2 into the function as an argument
      6.  console.log the results
  ********************************************/
 
+    var myctr = 1;  //global variable
+
+    var myCounter = function(newct){
+        myctr += newct;
+        console.log("counter: " , myctr);
+    };
+
+    myCounter(5);
+    myCounter(2);
 
 
 
@@ -629,7 +654,12 @@ console.log('------Functions ----------');
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
 
+    var myFn = function(){
+        return "jamesBond";
+    };
 
+    var name = myFn();
+    console.log("name: ", name);
 
     // if a return gives back no value, it instead returns “undefined”
     // this technique is commonly used to end a function early, during execution
@@ -648,6 +678,18 @@ console.log('------Functions ----------');
  ********************************************/
 
 
+    var myctr = 1;  //global variable
+
+    var myCounter = function(newct){
+        var myctr = 50;
+        myctr += newct;
+        return myctr;
+           };
+
+    var cnt = myCounter(5);
+    console.log("counter: " , cnt);
+    var cnt = myCounter(2);
+    console.log("counter: " , cnt);
 
 
 /*******************************************
@@ -660,3 +702,31 @@ console.log('------Functions ----------');
  5. console.log the Results
  ********************************************/
 
+    var value1 = "Sunny";
+    var value2 = 10;
+
+    var moodFN = function(weather, waves) {
+        if (weather === "Sunny") {
+            if (waves === 10) {
+                bobsMood = "PUMPED";
+            } else if ((waves < 9) && (waves >= 5)) {
+                bobsMood = "Mellow";
+            } else {
+                bobsMood = "bummed";
+            }
+        } else if (weather === "overcast") {
+            if ((waves < 10) && (waves >= 7)) {
+                bobsMood = "jackedUp";
+            } else if ((waves <= 6) && (waves >= 3)) {
+                bobsMood = "Totally Bummed";
+            } else {
+                bobsMood = "not happy";
+            }
+        } else {
+            bobsMood = "Sad";
+        };
+        return bobsMood;
+    };
+
+    var moodType = moodFN(value1, value2);
+    console.log("Bob's Mood: ", moodType);
