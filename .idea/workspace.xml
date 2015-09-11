@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0ee2ad3-30da-42df-9115-0487d5ec3217" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk2/goal1_assign_duel1/Flowchart_Duel1_Ritenour_Keri.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk2/goal1_assign_duel1/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk2/goal1_assign_duel1/images/fight_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk2/goal1_assign_duel1/images/grey_wash_wall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk2/goal1_assign_duel1/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk2/goal1_assign_duel1/js/main.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/js/search.js" afterPath="$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/js/search.js" />
     </list>
     <ignored path="PWA1-GITRepo-Ritenour.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,24 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk2/goal3_bug_scope/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.15100671">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/js/search.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-              <folding>
-                <marker date="1441943726000" expanded="true" signature="2113:2128" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -54,29 +38,7 @@
         <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20134228">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk2/goal3_bug_scope/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.074074">
-              <caret line="202" column="39" selection-start-line="202" selection-start-column="39" selection-end-line="202" selection-end-column="39" />
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -101,9 +63,9 @@
         <option value="$PROJECT_DIR$/Wk1/goal2_practice/index.html" />
         <option value="$PROJECT_DIR$/Wk1/goal2_practice/js/main.js" />
         <option value="$PROJECT_DIR$/Wk2/goal2_assign_JSpractice/js/main.js" />
-        <option value="$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/js/search.js" />
         <option value="$PROJECT_DIR$/Wk2/goal3_bug_scope/index.html" />
         <option value="$PROJECT_DIR$/Wk2/goal3_bug_scope/js/main.js" />
+        <option value="$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/js/search.js" />
         <option value="$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js" />
       </list>
     </option>
@@ -116,8 +78,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="49" />
+    <option name="x" value="221" />
+    <option name="y" value="23" />
     <option name="width" value="1385" />
     <option name="height" value="764" />
   </component>
@@ -337,7 +299,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="49" width="1385" height="764" extended-state="0" />
+    <frame x="221" y="23" width="1385" height="764" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -602,14 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Wk1/goal3_assign_debug/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09677419">
@@ -648,18 +602,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.2529511">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1441943726000" expanded="true" signature="2113:2128" placeholder="..." />
+            <marker date="1442008203000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wk2/goal3_assign_debug_v2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -668,7 +630,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20134228">
+        <state vertical-scroll-proportion="0.15100671">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>

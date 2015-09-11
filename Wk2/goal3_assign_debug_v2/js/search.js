@@ -1,6 +1,6 @@
 // Create privatized scope using a self-executing function
 (function(){
-	
+	console.log("Test 1")
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),
 		searchInput = document.forms[0].search,
