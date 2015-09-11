@@ -1,7 +1,7 @@
 /*
      Name: Keri Ritenour
-     Date: 9/5/2015
-     Assignment: Goal1: Assignment: Duel1
+     Date: 9/11/2015
+     Assignment: Goal2: Assignment: Duel2
  */
 
 //self-executing function
