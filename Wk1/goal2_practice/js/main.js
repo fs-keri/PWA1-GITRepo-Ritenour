@@ -21,11 +21,11 @@
 	 RECAP:  Data Types
 	 -----------------------------------------------
 	 "string"			              string literal
-	 1, 3.14, 10e10			  number literal
-	 TRUE / FALSE			  boolean literal
+	 1, 3.14, 10e10			  		  number literal
+	 TRUE / FALSE			  		  boolean literal
 	 ["a", "b", "c"]				  array literal
-	 function(arg, arg2){}	  function literal
-	 undefined					  undefined
+	 function(arg, arg2){}	  		  function literal
+	 undefined					  	  undefined
 	 */
 
 
