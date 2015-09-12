@@ -1,6 +1,6 @@
 /*
  Name: Keri Ritenour
- Date: 9/6/2015
+ Date: 9/11/2015
  Assignment: Goal3: Assignment: Debug
  */
 
@@ -143,4 +143,4 @@
 		return false;  //validate that the form is not empty
 		//close
 	};
-})();   //remove all parentheses;
+})();   //remove all parentheses
