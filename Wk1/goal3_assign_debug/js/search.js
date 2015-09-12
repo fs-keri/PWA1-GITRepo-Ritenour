@@ -5,52 +5,50 @@
  */
 
 // Create privatized scope using a self-executing function
-(function(){  //creates the function
-	
-	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),  //creates a variable requires a semi_colon
-		searchInput = document.forms[0].search,          //creates a variable requires a semi-colon
-		currentSearch = ''                               //creates a variable
-	;
-	
-	// Validates search query
-	var validqte == function(query){                   //creates a variable and compares it to a function named query
-		
-		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){                 //if the first entry in the string is a space
-			query = query.substring(1, query.length);  //remove it and go to the next entry
-		};
-		while(query.charAt(query.length-1) === ""){    //if the last entry in the string is a space
-			query = query.substring(0, query.length-1); //remove it and go to the next entry
-		;                                               //remove semi-colon
-		
-		// Check search length, must have 3 characters
-		if(query.length < 3){                      //if the search length has less than three characters
-			alert("Your search query is too small, try again.); //alert the user - need to add another quotation to the end of alert
+(function(){//creates the function
+        // Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
+        var resultsDIV = document.getElementById("results"),  //creates a variable requires a semi_colon
+             searchInput = document.forms[0].search,          //creates a variable requires a semi-colon
+             currentSearch = '';                              //creates a variable
+
+        // Validates search query
+           var validqte = function(query){                   //creates a variable and compares it to a function named query
+
+                // Trim whitespace from start and end of search query
+                   while(query.charAt(0) || " "){                 //if the first entry in the string is a space
+                   query = query.substring(1, query.length);  //remove it and go to the next entry
+                   }
+                   while(query.charAt(query.length-1) || ""){    //if the last entry in the string is a space
+                       query = query.substring(0, query.length-1); //remove it and go to the next entry
+                                                                     //remove semi-colon
+
+                // Check search length, must have 3 characters
+                   if(query.length < 3){                      //if the search length has less than three characters
+                      alert("Your search query is too small, try again."); //alert the user - need to add another quotation to the end of alert
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();                //removes the focus from the search box upon submitting
 			return;
-		};               //close
+		}               //close
 		
 		search(query);                        //calls the function to execute the search
-	};                  //close
+	}                  //close
 	
 	// Finds search matches
 	var search = function(query){             //creates a variable that equals a function
 		
 		// split the user's search query string into an array
 		var queryArray = query.join(" ");    //creates a variable that equals the query and joins them
-		
+  	
 		// array to store matched results from database.js
 		var results = [];                 //creates an array to store the results
-
+  
 		// loop through each index of db array
 		for(var i=0, j=db.length; i<j; i++){     //creates a for loop that checks to see if the first character in the string is j and
 			//if so, increments it to the next character
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
-			// save a lowercase variable of the video title
+    }// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|');    //creates a variable and splits the string into pieces
 			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);  //creates a variable, convert it to lowercase and start at index 0 and
 			// return the entire string, change to dbItem
@@ -66,19 +64,19 @@
 				var compare = dbitem.indexOf(qitem);   //creates a variable that is equal to the index of the item, change to dbItem
 				if(compare !== -1){       //creates an if statement that checks to if the compare variable does not equal less than 1
 					results.push(db[i]); //stores the results at the end of the array
-				};   //close
-			;        //close
-		;            //close
+				}   //close
+			      //close
+		           //close
 		
 		results.sort(); //stores the results and sorts them
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){  //if the length of the results are equal to zero
+		if(results.length === 0){  //if the length of the results are equal to zero
 			noMatch();  //run no matches
 		}else{          //or if the length of the results are greater than zero
 			showMatches(results); //run showMatches
-		};       //close
-	};          //close
+		}       //close
+	}        //close
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){     //creates a variable that runs a function if noMatch is true
@@ -114,7 +112,7 @@
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>';  //links the url
-		};    //close
+		}   //close
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.    displays the results in the html
 	};
 	
@@ -127,6 +125,21 @@
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
 		return false;  //validate that the form is not empty
-	;   //close
-
+	  //close
+};
+};
+};
 })();   //remove all parentheses
+	
+	// The onsubmit event will be reviewed in upcoming Course Material.
+	// THE LINE DIRECTLY BELOW IS CORRECT
+	document.forms[0].onsubmit = function(){  //takes the input from the form and upon submitting executes the function
+		var query = searchInput.value;      //creates a variable sets it equal to the the value that is input into the form
+		validqte(query);   //the query is validated
+
+        // return false is needed for most events - this will be reviewed in upcoming course material
+        // THE LINE DIRECTLY BELOW IS CORRECT
+		return false;  //validate that the form is not empty
+	  //close
+  };
+}();   //remove all parentheses
