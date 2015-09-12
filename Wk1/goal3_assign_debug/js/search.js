@@ -18,7 +18,7 @@
                    while(query.charAt(0) || " "){                 //if the first entry in the string is a space
                    query = query.substring(1, query.length);  //remove it and go to the next entry
                    }
-                   while(query.charAt(query.length-1) || ""){    //if the last entry in the string is a space
+                   while(query.charAt(query.length-1) === ""){    //if the last entry in the string is a space
                        query = query.substring(0, query.length-1); //remove it and go to the next entry
                                                                      //remove semi-colon
 
@@ -49,6 +49,7 @@
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
     }// save a lowercase variable of the video title
+    var db;
 			var dbTitleEnd = db[i].indexOf('|');    //creates a variable and splits the string into pieces
 			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);  //creates a variable, convert it to lowercase and start at index 0 and
 			// return the entire string, change to dbItem
@@ -103,7 +104,7 @@
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');   //need to create a variable and it splits the string into pieces
+			var titleEnd = results[i].indexOf('|');   //need to create a variable and it splits the string into pieces
 			title = results[i].subString(0, titleEnd); //need to create a variable that converts it to lowercase and start at index 0 and return the entire string
 			
 			// pull the video url after the title
@@ -129,7 +130,7 @@
 };
 };
 };
-})();   //remove all parentheses
+  //remove all parentheses
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
@@ -142,4 +143,4 @@
 		return false;  //validate that the form is not empty
 	  //close
   };
-}();   //remove all parentheses
+})();   //remove all parentheses
