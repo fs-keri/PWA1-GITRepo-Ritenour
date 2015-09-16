@@ -5,21 +5,23 @@
  */
 
 // Create privatized scope using a self-executing function
-(function(){//creates the function
+
+
+(function (){//creates the function
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),  //creates a variable requires a semi_colon
+	   var resultsDIV = document.getElementById("results"),  //creates a variable requires a semi_colon
 		searchInput = document.forms[0].search,          //creates a variable requires a semi-colon
 		currentSearch = '';                              //creates a variable
 
 	// Validates search query
-	var validqte = function(query){                   //creates a variable and compares it to a function named query
+	var validate = function(query){                   //creates a variable and compares it to a function named query
 
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) || " "){                 //if the first entry in the string is a space
 			query = query.substring(1, query.length);  //remove it and go to the next entry
 		}
-		while(query.charAt(query.length-1) === ""){    //if the last entry in the string is a space
-			query = query.substring(0, query.length-1); //remove it and go to the next entry
+		while(query.charAt(query.length-1) === "") {    //if the last entry in the string is a space
+			query = query.substring(0, query.length - 1); //remove it and go to the next entry
 			//remove semi-colon
 
 			// Check search length, must have 3 characters
@@ -121,7 +123,7 @@
 			// THE LINE DIRECTLY BELOW IS CORRECT
 			document.forms[0].onsubmit = function(){  //takes the input from the form and upon submitting executes the function
 				var query = searchInput.value;      //creates a variable sets it equal to the the value that is input into the form
-				validqte(query);   //the query is validated
+				validate(query);   //the query is validated
 
 				// return false is needed for most events - this will be reviewed in upcoming course material
 				// THE LINE DIRECTLY BELOW IS CORRECT
@@ -136,7 +138,7 @@
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function(){  //takes the input from the form and upon submitting executes the function
 		var query = searchInput.value;      //creates a variable sets it equal to the the value that is input into the form
-		validqte(query);   //the query is validated
+		validate(query);   //the query is validated
 
 		// return false is needed for most events - this will be reviewed in upcoming course material
 		// THE LINE DIRECTLY BELOW IS CORRECT
