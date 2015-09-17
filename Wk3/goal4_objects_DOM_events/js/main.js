@@ -69,6 +69,23 @@ console.log('------Objects ----------');
 
 console.log('------Object within an object, Arrays, Function ----------');
 
+	var thatGuy ={
+		name: 'JamesBond',
+		course: 'PWA1',
+		address: {
+			num: 3300,
+			street: 'University',
+			city: 'Orlando',
+			cornerOf: ['University', 'Semoran']
+		},
+		showMyAddress: function(){
+			var addr = this.address.street + ',' +this.address.city;
+			return addr;
+		}
+	};
+
+	console.log(thatGuy.showMyAddress());
+	console.log(thatGuy.address.street + ',' +thatGuy.address.city);
 
 
 //properties & methods
@@ -83,7 +100,12 @@ console.log('------Objects - properties & methods ----------');
 
 //Method 1 "Basic"
 
-
+	var fsStudent ={};   //intialized an object
+	fsStudent.age = 22;  //created 2 objects
+	fsStudent.career = 'Web Dev';
+	fsStudent.sayHello = function(){  //created a method
+		console.log('Hello!');
+	};
 
 
 // above, we first initialize the object, then we created 2 properties 
@@ -93,7 +115,12 @@ console.log('------Objects - properties & methods ----------');
 // we can also access the methods and properties of an object using  [ ] , 
 // 	by using their name as a string - all of the below are valid:
 
+	fsStudent.sayHello();  //calls a function using dot notation
 
+	fsStudent['sayHello']();  //uses an index
+
+	console.log(fsStudent.age);
+	console.log(fsStudent['age']);
 
 
 /* --------------
@@ -105,7 +132,19 @@ Method 2 "OBJECT Literal"
 	- below is the same object as in Method 1
 */
 
+	var fsStudent ={   //intialized an object
+	age: 22, //created 2 objects
+	career: 'Web Dev',
+	sayHello: function() {  //created a method
+		console.log('Hello!');
+	}
+	};
 
+	fsStudent.sayHello();  //calls a function using dot notation
+	fsStudent['sayHello']();  //uses an index
+
+	console.log(fsStudent.age);
+	console.log(fsStudent['age']);
 
 
 //---------------------------------------------
@@ -135,7 +174,7 @@ STUDENT ACTIVITY 1:
 
 console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 
-	schoolName
+
 
 
 // this is integrating multiple data types - object with an array of objects
