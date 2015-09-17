@@ -131,7 +131,7 @@ Method 2 "OBJECT Literal"
 
 	- below is the same object as in Method 1
 */
-
+	/*
 	var fsStudent ={   //intialized an object
 	age: 22, //created 2 objects
 	career: 'Web Dev',
@@ -174,8 +174,28 @@ STUDENT ACTIVITY 1:
 
 console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 
+var obj1 ={
+	schoolName:'Full Sail',
+	address: '123 University Blvd',
+	studentCount: 16000,
+	students: [
+		{name:'Jane Doe', GPA: 2.6, classes:['PWA1', 'PWA2']},
+		{name: 'Albert Einstein', GPA: 4.0},
+		{name: 'James Bond', GPA: 3.9}
+	]
+};
 
+	console.log(obj1.schoolName);
+	console.log(obj1['schoolName']);
 
+	var newCnt ='studentCount';
+	console.log(obj1[newCnt]);
+
+	var fieldName1 ='address';
+	console.log(obj1[fieldName1]);
+
+	console.log("James Bond's GPA:",obj1.students[2].GPA);
+	console.log("James Bond's GPA:",obj1['students'][2]['GPA']);
 
 // this is integrating multiple data types - object with an array of objects
 
@@ -193,6 +213,20 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
     2.  console.log the average grade by calling the gradeAvg method.
 ----------------------------------------------------------------------------- */
 
+	var gradeAvg = function(obj){
+		var count = 0;
+		var total = 0;
+
+		for (i = 0, j = obj.students.length; i <j; i++){  //as long as i is less than j keep running this loop
+			count++;
+			total = total + obj.students[i]['GPA'];
+
+		};
+		return total/count;
+	};
+
+	gradeAvg(obj1);
+	console.log('Average Grade:', gradeAvg(obj1));
 
 
 
@@ -206,11 +240,16 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 */
     console.log("---------- Object - For In Loop ----------------");
 
+	var students = {name:"JamesBond", gender:"male", job:"student"};
 
+	for(var key in students){
+		console.log('Key Name:', key);
+		console.log('Value of the key[',key,']:', students[key]);
+	};
 
 /*
 	===============================================
-	MORE Object infomation
+	MORE Object information
 	
 		- most strictly-typed languages have clear separations in their data types 
 			and classical behavior
@@ -241,7 +280,11 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 */
     console.log('------ Objects - Converting Datatypes ----------');
 
-
+	var myNum =1;
+	myString = String(myNum);
+	console.log('myString:', typeof myString, myString);
+	myBool = Boolean(myString);
+	console.log('myBool:,', typeof myBool, myBool);
 
 /*
 	- because these values act as objects, the data types also have methods and 
@@ -252,17 +295,41 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 
 // #1 - shows string length
 
+	myStr='OMG';
+	console.log(myStr.length);
 
 // #2 - shows array length
-	
+
+	myArr = [6,10];
+	console.log(myArr.length);
 
 // #3 - shows and array of objects, inside of an object length
-	
+
+	var obj1 ={
+		schoolName:'Full Sail',
+		address: '123 University Blvd',
+		studentCount: 16000,
+		students: [
+			{name:'Jane Doe', GPA: 2.6, classes:['PWA1', 'PWA2']},
+			{name: 'Albert Einstein', GPA: 4.0},
+			{name: 'James Bond', GPA: 3.9}
+		]
+	};
+	console.log('number of object fields', obj1.students.length);
 
 console.log('------ MORE Object examples - Objects/Functions ----------');
 
 // showing a function call and creating a method
 
+		var fn = function(name, course){
+			return{
+				sayHi: function(){
+					console.log("My name is " +name+ ". I am in course " +course);
+				}
+			}
+		};
+
+		fn("JamesBond","PWA1").sayHi();
 
 
 /*
