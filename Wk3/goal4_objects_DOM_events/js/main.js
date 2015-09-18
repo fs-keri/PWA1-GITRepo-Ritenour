@@ -456,8 +456,11 @@ console.log('------------ querySelectorAll -------------------');
     */
     console.log('------------ TRAVERSAL -------------------');
 
-
-
+	var apple = document.querySelectorAll('#nav li a')[2];
+	console.log(apple);
+	//console.log(apple.parentNode);
+	console.log(apple.parentNode.parentNode.parentNode); //traversing up
+	console.log(apple.parentNode.parentNode.parentNode.nextSibling); //traversing sideways
 
 /*
 	==================================================================
