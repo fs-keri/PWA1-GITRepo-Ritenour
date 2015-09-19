@@ -1,6 +1,6 @@
 /*
  Name: Keri Ritenour
- Date: 9/11/2015
+ Date: 9/18/2015
  Assignment: Goal3: Assignment: Debug
  */
 
@@ -17,12 +17,12 @@
 	var validate = function(query){                   //creates a variable and compares it to a function named query
 
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) || " "){                 //if the first entry in the string is a space
+		while(query.charAt(0) === " "){                 //if the first entry in the string is a space; removed pipe and added triple assignment operator
 			query = query.substring(1, query.length);  //remove it and go to the next entry
-		}
-		while(query.charAt(query.length-1) === "") {    //if the last entry in the string is a space
+		}; //added semi-colon
+		while(query.charAt(query.length-1) === " ") {    //if the last entry in the string is a space, added space
 			query = query.substring(0, query.length - 1); //remove it and go to the next entry
-			//remove semi-colon
+		};//added closing bracket and semi-colon
 
 			// Check search length, must have 3 characters
 			if(query.length < 3){                      //if the search length has less than three characters
@@ -31,45 +31,47 @@
 				// (DO NOT FIX THE LINE DIRECTLY BELOW)
 				searchInput.focus();                //removes the focus from the search box upon submitting
 				return;
-			}               //close
+			};               //close and add semi-colon
 
 			search(query);                        //calls the function to execute the search
-		}                  //close
+		};                  //close, added semi-colon
 
 		// Finds search matches
 		var search = function(query){             //creates a variable that equals a function
 
 			// split the user's search query string into an array
-			var queryArray = query.join(" ");    //creates a variable that equals the query and joins them
+			var queryArray = query.split(" ");    //creates a variable that equals the query and splits
 
 			// array to store matched results from database.js
 			var results = [];                 //creates an array to store the results
 
 			// loop through each index of db array
-			for(var i=0, j=db.length; i<j; i++){     //creates a for loop that checks to see if the first character in the string is j and
+			for(var i=0, j=db.length; i<j; i++) {     //creates a for loop that checks to see if the first character in the string is j and
 				//if so, increments it to the next character
-
+				//removed closing parenthesis
 				// each db[i] is a single video item, each title ends with a pipe "|"
-			}// save a lowercase variable of the video title
-			var db;
-			var dbTitleEnd = db[i].indexOf('|');    //creates a variable and splits the string into pieces
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);  //creates a variable, convert it to lowercase and start at index 0 and
-			// return the entire string, change to dbItem
+				// save a lowercase variable of the video title
+				//removed var db
+				var dbTitleEnd = db[i].indexOf('|');    //creates a variable and splits the string into pieces
+				var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);  //creates a variable, convert it to lowercase and start at index 0 and
+				// return the entire string, change to dbItem and corrected camelCase of toLowerCase
 
-			// loop through the user's search query words
-			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){   //creates a for loop that checks to see if the first two characters are jj and
-				//increments to the next character if jj is less than 0
-				var qitem = queryArray[ii].tolowercase();  //creates a variable that equals an array and converts it to lowercase
+				// loop through the user's search query words
+				// save a lowercase variable of the search keyword
+				for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {   //creates a for loop that checks to see if the first two characters are jj and
+					//increments to the next character if jj is less than 0
+					var qitem = queryArray[ii].toLowerCase();  //creates a variable that equals an array and converts it to lowercase, corrected camelCase of toLowerCase
 
-				// is the keyword anywhere in the video title?
-				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem);   //creates a variable that is equal to the index of the item, change to dbItem
-				if(compare !== -1){       //creates an if statement that checks to if the compare variable does not equal less than 1
-					results.push(db[i]); //stores the results at the end of the array
-				}   //close
-				//close
-				//close
+					// is the keyword anywhere in the video title?
+					// If a match is found, push full db[i] into results array
+					var compare = dbitem.indexOf(qitem);   //creates a variable that is equal to the index of the item, change to dbItem
+					if (compare !== -1) {       //creates an if statement that checks to if the compare variable does not equal less than 1
+						results.push(db[i]); //stores the results at the end of the array
+					}
+					;   //close, added semi-colon
+				}
+				;//close, added closing and semi-colon back in
+			};//close, added closing and semi-colon back in
 
 				results.sort(); //stores the results and sorts them
 
@@ -78,8 +80,8 @@
 					noMatch();  //run no matches
 				}else{          //or if the length of the results are greater than zero
 					showMatches(results); //run showMatches
-				}       //close
-			}        //close
+				};       //close, added semi-colon
+			};      //close, added semi-colon
 
 			// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 			var noMatch = function(){     //creates a variable that runs a function if noMatch is true
@@ -106,8 +108,9 @@
 
 					// title of video ends with pipe
 					// pull the title's string using index numbers
-					var titleEnd = results[i].indexOf('|');   //need to create a variable and it splits the string into pieces
-					title = results[i].subString(0, titleEnd); //need to create a variable that converts it to lowercase and start at index 0 and return the entire string
+					titleEnd = results[i].indexOf('|');   //need to create a variable and it splits the string into pieces, removed var assignment
+					title = results[i].substring(0, titleEnd); //need to create a variable that converts it to lowercase and start at index 0
+									// and return the entire string, removed camelCase from substring
 
 					// pull the video url after the title
 					url = results[i].substring(results[i].indexOf('|')+1, results[i].length); //displays the results with the url is equal to the results and and displays
@@ -130,19 +133,8 @@
 				return false;  //validate that the form is not empty
 				//close
 			};
-		};
-	};
-	//remove all parentheses
+		//removed closing and semi-colon
+	//removed closing and semi-colon
+	//removed duplicate code
 
-	// The onsubmit event will be reviewed in upcoming Course Material.
-	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){  //takes the input from the form and upon submitting executes the function
-		var query = searchInput.value;      //creates a variable sets it equal to the the value that is input into the form
-		validate(query);   //the query is validated
-
-		// return false is needed for most events - this will be reviewed in upcoming course material
-		// THE LINE DIRECTLY BELOW IS CORRECT
-		return false;  //validate that the form is not empty
-		//close
-	};
 })();   //remove all parentheses
