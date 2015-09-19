@@ -7,7 +7,7 @@
 //self-executing function
 (function(){
 
-    console.log("FIGHT!");
+    //console.log("FIGHT!");
 
     //arrays with player name [0], damage[1], health[2]
     //var player1 = ["Spiderman", 20, 100];
@@ -69,25 +69,36 @@
     };
 
     //check to see if win, no-win, die
-    function winnerCheck(){
-        console.log("in winnerCheck FN");
+    function winnerCheck(player1,player2){
+        //console.log("in winnerCheck FN");
         var result="no winner";
 
-        if(player1[2]<1 && player2[2]<1) {
+        if(player1.health <1 && player2.health<1) {
             result = "You Both Die";
-        }else if(player1[2]<1){
-            result=player2[0]+" WINS!!!"
-        }else if(player2[2]<1) {
-            result = player1[0] + " WINS!!!"
+        }else if(player1.health<1){
+            result=player2.health+" WINS!!!";
+        }else if(player2.health<1){
+            result = player1.health + " WINS!!!";
         }
 
         return result;
 
     };
 
-
+    result = winnerCheck();
     /* The program starts here */
-    console.log("program starts");
-    fight();
+    //console.log("program starts");
+
+    document.querySelector("#fight_btn a").onClick = function(e) {
+        fight(players);
+
+        if (result !== "It is a tie! No one wins!") {
+            console.log(1);
+            this.removeAttribute("onclick");
+        };
+
+        e.preventDefault();
+        return false;
+    };
 
 })();
