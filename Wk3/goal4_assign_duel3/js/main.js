@@ -1,7 +1,7 @@
 /*
      Name: Keri Ritenour
-     Date: 9/11/2015
-     Assignment: Goal2: Assignment: Duel2
+     Date: 9/18/2015
+     Assignment: Goal4: Assignment: Duel3
  */
 
 //self-executing function
@@ -10,45 +10,61 @@
     console.log("FIGHT!");
 
     //arrays with player name [0], damage[1], health[2]
-    var player1 = ["Spiderman", 20, 100];
-    var player2 = ["Batman", 20, 100];
+    //var player1 = ["Spiderman", 20, 100];
+    //var player2 = ["Batman", 20, 100];
+
+    //create objects for fighters using keys
+    var player1 = {name:"Spiderman", damage:20, health:100};
+    var player2 = {name:"Batman", damage:20, health:100};
+
+    //create an array for fighters
+    var players = [player1, player2];
 
     //starting round
     var round=0;
 
     //fight with random number that decrements
-    function fight(){
-        console.log("in the fight function");
+    function fight() {
+        //console.log("in the fight function");
 
-        alert(player1[0]+":"+player1[2]+" *START* "+player2[0]+":"+player2[2]);
+        //alert(player1[0]+":"+player1[2]+" *START* "+player2[0]+":"+player2[2]);
 
-        for (var i=0; i<10; i++){
-            //random formula is - Math.floor(Math.random() * (max - min) + min);
+        //for (var i=0; i<10; i++){
+        round++;
+        //random formula is - Math.floor(Math.random() * (max - min) + min);
+        var minDamage1 = players[0].damage * .5;
+        var minDamage2 = players[1].damage * .5;
+        var f1 = Math.floor(Math.random() * (players[0].damage - minDamage1) + minDamage1);
+        var f2 = Math.floor(Math.random() * (players[1].damage - minDamage2) + minDamage2);
 
-            var minDamage1=player1[1] * .5;
-            var minDamage2=player2[1] * .5;
-            var f1 = Math.floor(Math.random()*(player1[1]-minDamage1) +minDamage1);
-            var f2 = Math.floor(Math.random()*(player2[1]-minDamage2) +minDamage2);
+        //console.log(f1);
+        //console.log(f2);
 
-            //console.log(f1);
-            //console.log(f2);
+        //player inflicting damage
+        players[0] -= f1;
+        players[1] -= f2;
 
-            //player inflicting damage
-            player1[2]-=f1;
-            player2[2]-=f2;
+        //console.log(player1[0]+":"+player1[2]+" "+player2[0]+":"+player2[2]);
 
-            console.log(player1[0]+":"+player1[2]+" "+player2[0]+":"+player2[2]);
+        //create variables to get elements from html for player 1
+        var player1 = document.getElementById("kabal");
+        player1.innerHTML = players[0].name + ":" + players[0].health;
 
-            var results=winnerCheck();
-            console.log(results);
+        //create variables to get elements from html for player 1
+        var player2 = document.getElementById("kratos");
+        player2.innerHTML = players[1].name + ":" + players[1].health;
 
-            if(results==="no winner"){
-                round++;
-                alert(player1[0]+":"+player1[2]+" *ROUND "+round+" OVER* "+player2[0]+":"+player2[2]);
-            }else{
-                alert(results);
-                break;
-            }
+        //replace inner html to display round number
+        roundCnt = document.getElementById("round_number");
+        roundCnt.innerHTML = "Round: " + round;
+
+        //store results
+        results = winnerCheck(players[0], players[1]);
+
+
+        if (results !== "no winner") {
+            player1.innerHTML = results;
+            player2.innerHTML = results;
         };
     };
 
