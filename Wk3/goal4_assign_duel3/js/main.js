@@ -7,65 +7,65 @@
 //self-executing function
 (function(){
 
-    //console.log("FIGHT!");
+    console.log("FIGHT!");
 
-    //arrays with player name [0], damage[1], health[2]
-    //var player1 = ["Spiderman", 20, 100];
-    //var player2 = ["Batman", 20, 100];
+    //create array with players and assign objects for fighters using keys
+    var players =[
+    player1 = {name:"Spiderman", damage:20, health:100},
+    player2 = {name:"Batman", damage:20, health:100};
 
-    //create objects for fighters using keys
-    var player1 = {name:"Spiderman", damage:20, health:100};
-    var player2 = {name:"Batman", damage:20, health:100};
-
-    //create an array for fighters
     var players = [player1, player2];
 
+    //define variable for fight button
+    var blueButton = document.getElementById("fight_btn");
+
+    blueButton.addEventListener("click", fight);
+
+    //query html for player assignment
+    var player1 = document.querySelector("#kabal p");
+    kratos.innerHTML = players[0].name + ":" + players[0].health;
+    var player2 = document.querySelector("#kratos p");
+    kabal.innerHTML = players[1].name + ":" + players[1].health;
+
     //starting round
-    var round=0;
+    var round = 1;
+    var roundNum = document.querySelector("#round_number");
 
     //fight with random number that decrements
     function fight() {
-        //console.log("in the fight function");
-
-        //alert(player1[0]+":"+player1[2]+" *START* "+player2[0]+":"+player2[2]);
-
-        //for (var i=0; i<10; i++){
-        round++;
+        if (round < 10)
         //random formula is - Math.floor(Math.random() * (max - min) + min);
         var minDamage1 = players[0].damage * .5;
         var minDamage2 = players[1].damage * .5;
         var f1 = Math.floor(Math.random() * (players[0].damage - minDamage1) + minDamage1);
         var f2 = Math.floor(Math.random() * (players[1].damage - minDamage2) + minDamage2);
 
-        //console.log(f1);
-        //console.log(f2);
 
         //player inflicting damage
-        players[0] -= f1;
-        players[1] -= f2;
+        players[0].health -= f1;
+        players[1].health -= f2;
 
-        //console.log(player1[0]+":"+player1[2]+" "+player2[0]+":"+player2[2]);
 
         //create variables to get elements from html for player 1
-        var player1 = document.getElementById("kabal");
+        //var player1 = document.getElementById("kabal");
         player1.innerHTML = players[0].name + ":" + players[0].health;
 
         //create variables to get elements from html for player 1
-        var player2 = document.getElementById("kratos");
+        //var player2 = document.getElementById("kratos");
         player2.innerHTML = players[1].name + ":" + players[1].health;
 
         //replace inner html to display round number
-        roundCnt = document.getElementById("round_number");
-        roundCnt.innerHTML = "Round: " + round;
+        //roundCnt = document.getElementById("round_number");
+        //roundCnt.innerHTML = "Round: " + round;
 
         //store results
-        results = winnerCheck(players[0], players[1]);
+        results = winnerCheck();
 
 
-        if (results !== "no winner") {
-            player1.innerHTML = results;
-            player2.innerHTML = results;
-        };
+        //if (results === "No Winner") {
+          //  player1.innerHTML = results;
+            //player2.innerHTML = results;
+        //};
     };
 
     //check to see if win, no-win, die
@@ -73,32 +73,28 @@
         //console.log("in winnerCheck FN");
         var result="no winner";
 
-        if(player1.health <1 && player2.health<1) {
+        if(players[0].health <1 && players[1].health<1) {
             result = "You Both Die";
-        }else if(player1.health<1){
-            result=player2.health+" WINS!!!";
-        }else if(player2.health<1){
-            result = player1.health + " WINS!!!";
+        }else if(players[0].health<1){
+            result=players[1].health+" WINS!!!";
+        }else if(players[1].health<1){
+            result = players[0].health + " WINS!!!";
         }
 
         return result;
 
     };
 
-    result = winnerCheck();
+    var result = winnerCheck();
     /* The program starts here */
     //console.log("program starts");
 
-    document.querySelector("#fight_btn a").onClick = function(e) {
-        fight(players);
 
-        if (result !== "It is a tie! No one wins!") {
-            console.log(1);
-            this.removeAttribute("onclick");
-        };
 
+    fightButton.onclick = function(e){
+        fight();
         e.preventDefault();
         return false;
-    };
+    }
 
 })();
