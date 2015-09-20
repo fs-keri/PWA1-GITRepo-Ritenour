@@ -10,7 +10,7 @@
     console.log("FIGHT!");
 
     //create array with players and assign objects for fighters using keys
-    var players =[
+    var players =
     player1 = {name:"Spiderman", damage:20, health:100},
     player2 = {name:"Batman", damage:20, health:100};
 
