@@ -47,25 +47,15 @@
 
 
         //create variables to get elements from html for player 1
-        //var player1 = document.getElementById("kabal");
         player1.innerHTML = players[0].name + ":" + players[0].health;
 
         //create variables to get elements from html for player 1
-        //var player2 = document.getElementById("kratos");
         player2.innerHTML = players[1].name + ":" + players[1].health;
 
-        //replace inner html to display round number
-        //roundCnt = document.getElementById("round_number");
-        //roundCnt.innerHTML = "Round: " + round;
 
         //store results
         results = winnerCheck();
 
-
-        //if (results === "No Winner") {
-          //  player1.innerHTML = results;
-            //player2.innerHTML = results;
-        //};
     };
 
     //check to see if win, no-win, die
@@ -87,7 +77,6 @@
 
     var result = winnerCheck();
     /* The program starts here */
-    //console.log("program starts");
 
 
 
