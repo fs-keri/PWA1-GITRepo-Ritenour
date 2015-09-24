@@ -401,7 +401,16 @@ STUDENT ACTIVITY
 
     console.log('------------ Math Methods -------------------');
 
+	//console.log(document.getElementById("tagbox").innerHTML = Math.random()); //math.random() will always be between 0 and 1
 
+	var rand = (Math.random() * 10 + 1); //put max number where 10 is and min where 1 is
+	console.log("rand: ", rand);
+	var num = Math.floor(rand);
+	console.log(num);
+
+	console.log(document.getElementById("tagbox").innerHTML = Math.max(5,10));
+	console.log(document.getElementById("tagbox").innerHTML = Math.min(5,10));
+	console.log(document.getElementById("tagbox").innerHTML = Math.round(2.5));
 
     /******************************************************************************
      STUDENT ACTIVITY
@@ -410,7 +419,7 @@ STUDENT ACTIVITY
      (100, 1000, 50, 2, 55, 75)
 
 
-     2.  Produce a random number between 100 and 10,000.
+     2.  Produce a random integer number between 100 and 10,000.
 
 
      3. 	Produce a random number between 100 and 10, and round it to the nearest
@@ -419,6 +428,16 @@ STUDENT ACTIVITY
 
     ****************************************************************************/
 
+	console.log(Math.max(100, 1000, 50, 2, 55, 75));
+	console.log(Math.min(100, 1000, 50, 2, 55, 75));
+
+	console.log(Math.floor(Math.random() * 10000 + 100));
+
+	var num = (Math.random() * 100 + 10);
+	console.log(num);
+
+	var num2 = (Math.round(num));
+	console.log(num2);
 
 
 
@@ -436,6 +455,22 @@ STUDENT ACTIVITY
     console.log('------------ Date Methods -------------------');
 
 
+	console.log(new Date());
 
+	/*
+	var d = new Date();
+	console.log(d.getDate());
+	console.log(d.getDay());
+	console.log(d.getFullYear());
+	console.log(d.getHours());
+	console.log(d.getMilliseconds());
+	console.log(d.getTime());
 
+	console.log(d.setFullYear(2021, 0, 01));
+	document.getElementById("tagbox").innerHTML=d;
+
+	var d = new Date();
+	console.log(d.toLocaleDateString());
+	console.log(d.toString());
+	*/
 })(); // end wrapper
