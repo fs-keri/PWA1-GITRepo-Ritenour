@@ -4,10 +4,7 @@
     <option name="SPLITTER_PROPORTION" value="0.5834609" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ee2ad3-30da-42df-9115-0487d5ec3217" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wk4/goal5_RegEx_Math_Date/js/script.js" afterPath="$PROJECT_DIR$/Wk4/goal5_RegEx_Math_Date/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="e0ee2ad3-30da-42df-9115-0487d5ec3217" name="Default" comment="" />
     <ignored path="PWA1-GITRepo-Ritenour.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Wk4/goal5_RegEx_Math_Date/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.16006097">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -737,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk4/goal5_RegEx_Math_Date/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.16006097">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
