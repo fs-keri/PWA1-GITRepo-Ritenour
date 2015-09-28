@@ -5,3 +5,12 @@
  * Class: PWA
  * Goal: Goal7
  */
+
+
+//Create the Person Constructor using name and row number
+
+
+//Create the prototype for the Person name, action, job and row
+
+
+//populate HTML
